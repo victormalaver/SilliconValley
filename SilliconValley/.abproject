@@ -1,0 +1,45 @@
+{
+  "ProjectName": "SilliconValley",
+  "ProjectGuid": "5311398b-4cff-4b10-b67d-695a66195822",
+  "projectVersion": 1,
+  "AppIdentifier": "com.telerik.SilliconValley",
+  "DisplayName": "SilliconValley",
+  "Author": "",
+  "Description": "SilliconValley",
+  "BundleVersion": "1.0",
+  "AndroidVersionCode": "1",
+  "iOSDeviceFamily": [
+    "1",
+    "2"
+  ],
+  "iOSBackgroundMode": [],
+  "ProjectTypeGuids": "{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}",
+  "FrameworkVersion": "4.0.0",
+  "AndroidPermissions": [
+    "android.permission.INTERNET"
+  ],
+  "DeviceOrientations": [
+    "Portrait",
+    "Landscape"
+  ],
+  "AndroidHardwareAcceleration": "true",
+  "iOSStatusBarStyle": "Default",
+  "Framework": "Cordova",
+  "WP8TileTitle": "",
+  "WP8Publisher": "",
+  "WP8Capabilities": [
+    "ID_CAP_NETWORKING",
+    "ID_CAP_WEBBROWSERCOMPONENT"
+  ],
+  "WP8Requirements": [],
+  "WP8PublisherID": "{b90b25ca-856f-46d4-a36c-393a68b1f93a}",
+  "WP8ProductID": "{eb7126c1-29a2-4793-88fd-6f69c713aa37}",
+  "WPSdk": "8.0",
+  "WP8PackageIdentityName": "1234Telerik.SilliconValley",
+  "WP8WindowsPublisherName": "CN=Telerik",
+  "WP8SupportedResolutions": [
+    "ID_RESOLUTION_WVGA",
+    "ID_RESOLUTION_WXGA",
+    "ID_RESOLUTION_HD720P"
+  ]
+}
