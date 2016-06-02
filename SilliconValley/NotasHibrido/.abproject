@@ -1,0 +1,45 @@
+{
+  "ProjectName": "NotasHibrido",
+  "ProjectGuid": "f7cda0fb-b4a3-4f43-89cb-f7702f5435dd",
+  "projectVersion": 1,
+  "AppIdentifier": "com.telerik.NotasHibrido",
+  "DisplayName": "NotasHibrido",
+  "Author": "",
+  "Description": "NotasHibrido",
+  "BundleVersion": "1.0",
+  "AndroidVersionCode": "1",
+  "iOSDeviceFamily": [
+    "1",
+    "2"
+  ],
+  "iOSBackgroundMode": [],
+  "ProjectTypeGuids": "{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}",
+  "FrameworkVersion": "4.0.0",
+  "AndroidPermissions": [
+    "android.permission.INTERNET"
+  ],
+  "DeviceOrientations": [
+    "Portrait",
+    "Landscape"
+  ],
+  "AndroidHardwareAcceleration": "true",
+  "iOSStatusBarStyle": "Default",
+  "Framework": "Cordova",
+  "WP8TileTitle": "",
+  "WP8Publisher": "",
+  "WP8Capabilities": [
+    "ID_CAP_NETWORKING",
+    "ID_CAP_WEBBROWSERCOMPONENT"
+  ],
+  "WP8Requirements": [],
+  "WP8PublisherID": "{0d6ce88b-ce79-400f-afd8-5e244aeadd0d}",
+  "WP8ProductID": "{6104cb90-6ee0-4f3a-8629-67c79bc16521}",
+  "WPSdk": "8.0",
+  "WP8PackageIdentityName": "1234Telerik.NotasHibrido",
+  "WP8WindowsPublisherName": "CN=Telerik",
+  "WP8SupportedResolutions": [
+    "ID_RESOLUTION_WVGA",
+    "ID_RESOLUTION_WXGA",
+    "ID_RESOLUTION_HD720P"
+  ]
+}

@@ -1,0 +1,27 @@
+<div data-role="view" data-title="Registrarse" data-layout="main" data-model="app.home" data-show="app.home.onShow" data-after-show="app.home.afterShow">
+    <div class="signup-view">
+        <form>
+            <ul data-role="listview" data-style="inset">
+                <li>
+                    <label>Correo
+                        <input type="email" data-bind="value: homeModel.email" required>
+                    </label>
+                </li>
+                <li>
+                    <label>Contraseña
+                        <input type="password" data-bind="value: homeModel.password">
+                    </label>
+                </li>
+                <li>
+                    <label>Nombre
+                        <input type="text" data-bind="value: homeModel.displayName">
+                    </label>
+                </li>
+            </ul>
+            <div class="button-group button-group-vertical">
+                <a class="primary" data-role="button" data-bind="events: { click: homeModel.register }">Registrarse</a>
+                <a data-role="button" data-bind="events: { click: homeModel.goToView }">Regresar</a>
+            </div>
+        </form>
+    </div>
+</div>

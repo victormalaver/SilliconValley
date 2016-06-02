@@ -1,0 +1,282 @@
+{
+  "type": "kendo-ui-mobile",
+  "views": [
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "inicio",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:authentication",
+          "name": "inicioModel",
+          "dataProvider": "notasHibrido",
+          "emailLabel": "Email",
+          "passwordLabel": "Password",
+          "signinLabel": "Sign In",
+          "signinRedirect": "expocision",
+          "enableRegistration": true,
+          "gotoRegisterLabel": "Register",
+          "registerEmailLabel": "Email",
+          "registerPasswordLabel": "Password",
+          "registerNameLabel": "Name",
+          "registerLabel": "Register",
+          "registerRedirect": "expocision",
+          "gotoSigninLabel": "Sign In",
+          "enableLogout": true,
+          "logoutLabel": "Sign Out",
+          "enableRememberme": false
+        }
+      ],
+      "title": "Login",
+      "addToNavigation": true,
+      "icon": "home"
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "expocision",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:editableList",
+          "listExtraFields": [],
+          "detailExtraFields": [],
+          "components": [
+            {
+              "type": "kendo-ui-mobile:editableListForm",
+              "components": [
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "resumen",
+                  "title": "Long text",
+                  "inputType": "longText",
+                  "dataBindingOptional": "Resumen"
+                }
+              ],
+              "name": "editableListForm24",
+              "formType": "detail"
+            }
+          ],
+          "name": "expocisionModel",
+          "dataProvider": "notasHibrido",
+          "collection": "Exposicion",
+          "headerField": "Tema",
+          "iconField": true,
+          "imageField": "Picture",
+          "subHeaderField": "Lugar",
+          "pullToRefresh": false,
+          "endlessScroll": false,
+          "deleteItemButton": false,
+          "detailHeaderFieldSource": "dataBound",
+          "detailHeaderField": "Fecha",
+          "detailSubHeaderField": "Tema",
+          "detailDescriptionField": "Lugar",
+          "addItemForm": false,
+          "editItemForm": false
+        }
+      ],
+      "title": "Exposiciones",
+      "addToNavigation": true,
+      "icon": "bookmarks"
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "nota",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:editableList",
+          "listExtraFields": [],
+          "detailExtraFields": [],
+          "components": [
+            {
+              "type": "kendo-ui-mobile:editableListForm",
+              "components": [
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "tipo",
+                  "title": "Tipo",
+                  "inputType": "shortText",
+                  "dataBindingOptional": "Tipo",
+                  "components": [
+                    {
+                      "type": "kendo-ui-mobile:editableList",
+                      "listExtraFields": [],
+                      "detailExtraFields": [],
+                      "components": [],
+                      "name": "tipoModel",
+                      "dataProvider": "notasHibrido",
+                      "collection": "Tipo",
+                      "headerField": "Tipo",
+                      "pullToRefresh": false,
+                      "endlessScroll": false,
+                      "deleteItemButton": false,
+                      "detailHeaderFieldSource": "static",
+                      "detailHeaderFieldValue": "Detail",
+                      "addItemForm": false,
+                      "editItemForm": false
+                    }
+                  ]
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "users",
+                  "title": "User",
+                  "inputType": "shortText",
+                  "dataBindingOptional": "Users"
+                }
+              ],
+              "name": "editableListForm8",
+              "formType": "list"
+            },
+            {
+              "type": "kendo-ui-mobile:editableListForm",
+              "components": [
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "nota",
+                  "title": "Nota",
+                  "inputType": "text",
+                  "titlePosition": "left",
+                  "placeholder": "Escriba aquí una nota de la exposición ...",
+                  "dataBinding": "Nota"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "categoria",
+                  "title": "Categoria",
+                  "inputType": "checkbox",
+                  "dataBinding": "Categoria",
+                  "components": [
+                    {
+                      "type": "kendo-ui-mobile:editableList",
+                      "listExtraFields": [],
+                      "detailExtraFields": [],
+                      "components": [],
+                      "name": "categoriaModel",
+                      "dataProvider": "notasHibrido",
+                      "collection": "Categoria",
+                      "headerField": "Categoria",
+                      "pullToRefresh": false,
+                      "endlessScroll": false,
+                      "deleteItemButton": false,
+                      "detailHeaderFieldSource": "static",
+                      "detailHeaderFieldValue": "Detail",
+                      "addItemForm": false,
+                      "editItemForm": false
+                    }
+                  ]
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "tipo",
+                  "title": "Tipo",
+                  "inputType": "switch",
+                  "dataBinding": "Tipo"
+                }
+              ],
+              "name": "editableListForm20",
+              "formType": "add"
+            },
+            {
+              "type": "kendo-ui-mobile:editableListForm",
+              "components": [
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "nota",
+                  "title": "Nota",
+                  "inputType": "text",
+                  "titlePosition": "left",
+                  "placeholder": "Escriba aquí una nota de la exposición ...",
+                  "dataBinding": "Nota"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "categoria",
+                  "title": "Categoria",
+                  "inputType": "checkbox",
+                  "dataBinding": "Categoria"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "tipo",
+                  "title": "Tipo",
+                  "inputType": "switch",
+                  "dataBinding": "Tipo"
+                }
+              ],
+              "name": "editableListForm21",
+              "formType": "edit"
+            },
+            {
+              "type": "kendo-ui-mobile:editableListForm",
+              "components": [
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "tipo",
+                  "title": "Tipo",
+                  "inputType": "shortText",
+                  "dataBindingOptional": "Tipo"
+                }
+              ],
+              "name": "editableListForm22",
+              "formType": "detail"
+            }
+          ],
+          "name": "notaModel",
+          "dataProvider": "notasHibrido",
+          "collection": "Nota",
+          "headerField": "Nota",
+          "iconField": true,
+          "subHeaderField": "Categoria",
+          "filterField": "Nota",
+          "pullToRefresh": true,
+          "endlessScroll": true,
+          "deleteItemButton": true,
+          "deleteItemConfirmation": true,
+          "detailHeaderFieldSource": "static",
+          "detailHeaderFieldValue": "Detail",
+          "detailSubHeaderField": "Nota",
+          "detailDescriptionField": "Categoria",
+          "addItemForm": true,
+          "addScreenHeaderValue": "Create",
+          "editItemForm": true,
+          "editScreenHeaderSource": "static",
+          "editScreenHeaderValue": "Edit"
+        }
+      ],
+      "title": "Notas",
+      "addToNavigation": true,
+      "icon": "edit"
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "categoria",
+      "components": [],
+      "title": "Categorias",
+      "addToNavigation": true,
+      "icon": "organize"
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "tipo",
+      "components": [],
+      "title": "Tipo",
+      "addToNavigation": true,
+      "icon": "organize"
+    }
+  ],
+  "dataProviders": [
+    {
+      "type": "kendo-ui-mobile:dataProvider",
+      "name": "notasHibrido",
+      "title": "NotasHibrido / NotasHibrido",
+      "source": "everlive",
+      "everliveKey": "l3olb90oujzqeiyd",
+      "offlineStorage": true
+    }
+  ],
+  "name": "kendoUiMobileApp",
+  "navigation": "drawer",
+  "view": "inicio",
+  "skin": "nova",
+  "skinMainColor": "#32364c",
+  "skinTextColor": "#ffffff",
+  "skinAccentColor": "#ff4350"
+}

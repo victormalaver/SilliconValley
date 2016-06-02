@@ -1,0 +1,76 @@
+<div data-role="view" data-title="Crear Nota" data-model="app.nota.addItemViewModel" data-bind="events: { show: onShow }" id="notaModelAddItemView">
+    <header data-role="header">
+        <div data-role="navbar" class="header-text">
+            <span style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis; text-align: center; display: block; margin-left: 70px; margin-right: 70px;" data-role="view-title"></span>
+            <a data-role="backbutton" data-align="left">Cancel</a>
+            <a data-role="button" data-align="right" data-bind="events: { click: onSaveClick }">Save</a>
+        </div>
+    </header>
+    <!-- START_CUSTOM_CODE_notaModel -->
+    <!-- END_CUSTOM_CODE_notaModel -->
+    <div id="editableListForm20" class="form-view">
+        <form>
+            <ul class="form-content" data-role="listview" data-style="inset">
+                <li class="form-content-item">
+                    <label class="km-label-above km-label-hidden">
+                        &nbsp;
+                        <textarea id="nota" data-bind="value: addFormData.nota" class="k-textbox" placeholder="Escriba aquí una nota de la exposición ..." rows="10" style="width: 100%;"></textarea>
+                    </label>
+                </li>
+                <li class="form-content-item" onclick="openModal('modalview-categoria')">
+                    <label>
+
+                        <span>Categoria</span>
+
+                        <input id="categoria" data-bind="value: addFormData.categoria" type="text">
+                    </label>
+                </li>
+                <li class="form-content-item" onclick="openModal('modalview-tipo')" >
+                    <label>
+
+                        <span>Tipo</span>
+
+                        <input id="tipo" data-bind="value: addFormData.tipo" type="text">
+                    </label>
+                </li>
+            </ul>
+        </form>
+        <!-- START_CUSTOM_CODE_editableListForm20 -->
+        <!-- END_CUSTOM_CODE_editableListForm20 -->
+    </div>
+</div>
+<div data-role="modalview" id="modalview-categoria" style="width: 90%;"  data-close="onCloseModalCategoria">
+    <div data-role="header">
+        <div data-role="navbar">
+            <span>Categorías</span>
+            <a onclick="closeModal('modalview-categoria')" data-role="button" data-align="right">Cancel</a>
+        </div>
+    </div>
+    <ul data-role="listview" data-style="inset">
+        <li id="listCategorias" class="form-content-item"></li>
+    </ul>
+    <div data-role="footer">
+        <div data-role="navbar">
+            <a onclick="closeModal('modalview-categoria')" type="button" data-role="button" data-align="right">Cancelar</a>
+            <a data-click="closeModalViewLogin" type="button" data-role="button" data-align="right">Aceptar</a>
+        </div>
+    </div>
+</div>
+
+<div data-role="modalview" id="modalview-tipo" style="width: 90%;" data-close="onCloseModalTipo">
+    <div data-role="header">
+        <div data-role="navbar">
+            <span>Tipos</span>
+            <a onclick="closeModal('modalview-tipo')" data-role="button" data-align="right">Cancel</a>
+        </div>
+    </div>
+    <ul data-role="listview" data-style="inset">
+        <li id="listTipos" class="form-content-item"></li>
+    </ul>
+    <div data-role="footer">
+        <div data-role="navbar">
+            <a onclick="closeModal('modalview-tipo')" type="button" data-role="button" data-align="right">Cancelar</a>
+            <a data-click="closeModalViewLogin" type="button" data-role="button" data-align="right">Aceptar</a>
+        </div>
+    </div>
+</div>

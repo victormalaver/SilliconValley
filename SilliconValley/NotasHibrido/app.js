@@ -1,6 +1,5 @@
 'use strict';
-var servidor = "http://localhost:8080/WsRestfull.SilliconValley0124/";
-var token = "";
+
 (function () {
     var app = {
         data: {}
@@ -10,7 +9,7 @@ var token = "";
         $(function () {
             app.mobileApp = new kendo.mobile.Application(document.body, {
                 skin: 'nova',
-                initial: 'components/home/view.html'
+                initial: 'components/inicio/view.html'
             });
         });
     };
@@ -61,3 +60,16 @@ var token = "";
 // Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes
 
 // END_CUSTOM_CODE_kendoUiMobileApp
+
+function closeModal(modal) {
+    $("#" + modal).kendoMobileModalView("close");
+}
+
+function openModal(modal) {
+    var mv = $("#" + modal).data("kendoMobileModalView");
+    mv.shim.popup.options.animation.open.effects = "zoom";
+    mv.open();
+}
+function cerrarSesion() {
+    $("#DisplayName").attr("type", "");
+}

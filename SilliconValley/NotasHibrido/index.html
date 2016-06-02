@@ -5,17 +5,24 @@
     <title></title>
     <meta charset="utf-8">
     <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet">
+
     <link href="styles/overrides.css" rel="stylesheet">
     <link href="styles/main.css" rel="stylesheet">
+
     <script src="cordova.js"></script>
     <script src="kendo/js/jquery.min.js"></script>
     <script src="kendo/js/kendo.mobile.min.js"></script>
     <script src="app.js"></script>
+    <script src="bower_components/everlive/min/everlive.all.min.js"></script>
+    <script src="dataProviders/notasHibrido.js"></script>
 </head>
 
 <body id="kendoUiMobileApp">
-    <script src="components/home/index.js"></script>
+    <script src="components/tipo/index.js"></script>
+    <script src="components/categoria/index.js"></script>
+    <script src="components/nota/index.js"></script>
     <script src="components/expocision/index.js"></script>
+    <script src="components/inicio/index.js"></script>
     <div data-role="layout" data-id="main">
         <header data-role="header">
             <div data-role="navbar">
@@ -24,6 +31,7 @@
             </div>
         </header>
     </div>
+
     <div data-role="layout" data-id="main-nonav">
         <header data-role="header">
             <div data-role="navbar">
@@ -31,6 +39,7 @@
             </div>
         </header>
     </div>
+
     <div id="appDrawer" data-role="drawer" data-title="Navigation">
         <header data-role="header">
             <div data-role="navbar">
@@ -38,12 +47,21 @@
             </div>
         </header>
         <ul id="navigation-container" data-role="listview">
-            <li><a href="components/home/view.html" data-icon="home">Home View</a></li>
+            <li><a href="components/inicio/view.html" data-icon="home" id="DisplayName" type="">Login</a></li>
+
             <li><a href="components/expocision/view.html" data-icon="bookmarks">Exposiciones</a></li>
+
+<!--             <li><a href="components/nota/view.html" data-icon="edit">Notas</a></li>
+
+            <li><a href="components/categoria/view.html" data-icon="organize">Categorias</a></li>
+
+            <li><a href="components/tipo/view.html" data-icon="organize">Tipo</a></li> -->
+            <li id="inicioModellogout"><a href="components/inicio/view.html?logout=true" data-position="end" data-icon="action" onclick="cerrarSesion();">Sign Out</a></li>
         </ul>
     </div>
     <!-- START_CUSTOM_CODE_kendoUiMobileApp -->
     <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+
     <!-- END_CUSTOM_CODE_kendoUiMobileApp -->
 </body>
 
