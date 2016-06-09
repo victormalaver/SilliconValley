@@ -27,7 +27,7 @@
 
                         <span>Categoria</span>
 
-                        <input id="categoria" data-bind="value: editFormData.categoria" type="checkbox">
+                        <input id="editCategoria" data-bind="value: editFormData.categoria" type="checkbox">
                     </label>
 
                 </li>
@@ -37,7 +37,7 @@
 
                         <span>Tipo</span>
 
-                        <input id="tipo" data-bind="value: editFormData.tipo" data-role="switch">
+                        <input id="editTipo" data-bind="value: editFormData.tipo" data-role="switch">
                     </label>
 
                 </li>
@@ -45,5 +45,40 @@
         </form>
         <!-- START_CUSTOM_CODE_editableListForm21 -->
         <!-- END_CUSTOM_CODE_editableListForm21 -->
+    </div>
+</div>
+<div data-role="modalview" id="modalview-categoria" style="width: 90%;"  data-close="onCloseModalCategoria">
+    <div data-role="header">
+        <div data-role="navbar">
+            <span>Categorías</span>
+            <a onclick="closeModal('modalview-categoria')" data-role="button" data-align="right">Cancel</a>
+        </div>
+    </div>
+    <ul data-role="listview" data-style="inset">
+        <li id="listCategorias" class="form-content-item"></li>
+    </ul>
+    <div data-role="footer">
+        <div data-role="navbar">
+            <a onclick="closeModal('modalview-categoria')" type="button" data-role="button" data-align="right">Cancelar</a>
+            <a data-click="closeModalViewLogin" type="button" data-role="button" data-align="right">Aceptar</a>
+        </div>
+    </div>
+</div>
+
+<div data-role="modalview" id="modalview-tipo" style="width: 90%;" data-close="onCloseModalTipo">
+    <div data-role="header">
+        <div data-role="navbar">
+            <span>Tipos</span>
+            <a onclick="closeModal('modalview-tipo')" data-role="button" data-align="right">Cancel</a>
+        </div>
+    </div>
+    <ul data-role="listview" data-style="inset">
+        <li id="listTipos" class="form-content-item"></li>
+    </ul>
+    <div data-role="footer">
+        <div data-role="navbar">
+            <a onclick="closeModal('modalview-tipo')" type="button" data-role="button" data-align="right">Cancelar</a>
+            <a data-click="closeModalViewLogin" type="button" data-role="button" data-align="right">Aceptar</a>
+        </div>
     </div>
 </div>

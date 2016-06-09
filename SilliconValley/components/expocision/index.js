@@ -71,39 +71,14 @@ app.expocision = kendo.observable({
 
             transport: {
                 read: {
-                    url: servidor + 'expositor/listar',
-                    beforeSend: function (xhr) {
-                        xhr.setRequestHeader('Token', '1ubs0ero94bbfgfbq8ci5lc55a');
-                    }
-                    
-                    // beforeSend: function (req) {
-                    //     req.setRequestHeader('token', 'mme6adflibudv08m00uvvmunpe');
-                    // }
-
-                    // data: {
-                    //     __RequestVerificationToken: 'mme6adflibudv08m00uvvmunpe'
-                    // }
-
-                    // headers: { 'token': 'mme6adflibudv08m00uvvmunpe'  }
-
-                    // dataType: "json",
-                    // contentType: "application/json; charset=utf-8",
-                    // beforeSend: function (xhr) {
-                    //     xhr.setRequestHeader('token', 'mme6adflibudv08m00uvvmunpe')
-                    // }
-
-                    // beforeSend: function (xhr) {
-                    //     xhr.setRequestHeader('token', 'mme6adflibudv08m00uvvmunpe')
-                    // }
-
-
+                    url: servidor + 'expositor/listar'
                 }
             },
             requestStart: function () {
-                kendo.ui.progress($("#products"), true);
+                // kendo.ui.progress($("#products"), true);
             },
             requestEnd: function () {
-                kendo.ui.progress($("#products"), false);
+                // kendo.ui.progress($("#products"), false);
             },
             // change: function () {
             //     $("#products").html(kendo.render(template, this.view()));
@@ -128,12 +103,16 @@ app.expocision = kendo.observable({
             schema: {
                 model: {
                     fields: {
-                        'Tema': {
-                            field: 'Tema',
+                        'tema': {
+                            field: 'tema',
                             defaultValue: ''
                         },
-                        'Lugar': {
-                            field: 'Lugar',
+                        'nombreEmpresa': {
+                            field: 'nombreEmpresa',
+                            defaultValue: ''
+                        },
+                        'fechaExposicion': {
+                            field: 'fechaExposicion',
                             defaultValue: ''
                         },
                         'Picture': {
@@ -152,23 +131,29 @@ app.expocision = kendo.observable({
         dataSource = new kendo.data.DataSource(dataSourceOptions),
         expocisionModel = kendo.observable({
             dataSource: dataSource,
-            itemClick: function (e) {
-
-                // app.mobileApp.navigate('#components/expocision/details.html?uid=' + e.dataItem.uid);
+            goToNotas: function (e) {
                 app.mobileApp.navigate('#components/nota/view.html?filter=' + encodeURIComponent(JSON.stringify({
-                    field: 'Exposicion',
-                    value: e.dataItem.Id,
+                    field: 'expositor',
+                    value: e.data.id,
                     operator: 'eq'
                 })));
+            },
+            itemClick: function (e) {
+
+                app.mobileApp.navigate('#components/expocision/details.html?uid=' + e.data.id);
 
             },
             detailsShow: function (e) {
                 var item = e.view.params.uid,
                     dataSource = expocisionModel.get('dataSource'),
-                    itemModel = dataSource.getByUid(item);
+                    // itemModel = dataSource.getByUid(item);
+                    itemModel = dataSource.get(item);
+                if (itemModel.fechaExposicion) {
+                    itemModel.fechaExposicion =kendo.toString(new Date(itemModel.fechaExposicion), "d/M/yyyy h:mm tt") 
+                }
 
-                if (!itemModel.Fecha) {
-                    itemModel.Fecha = String.fromCharCode(160);
+                if (itemModel.imagen) {
+                    itemModel.imagen = "data:image/png;base64," + itemModel.imagen
                 }
 
                 expocisionModel.set('currentItem', null);

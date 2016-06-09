@@ -1,39 +1,35 @@
-<div data-role="view" data-title="Iniciar Sesión" data-layout="main" data-model="app.home" data-show="app.home.onShow" data-after-show="app.home.afterShow">
+<div id="homeView" data-role="view" data-title="" data-layout="main" data-model="app.home" data-show="app.home.onShow" data-after-show="app.home.afterShow">
+    <header data-role="header">
+        <img src="imgs/ic_commonlogo.png" width="100%" height="auto">
+        <img src="imgs/ic_applogo.png" width="50%" height="auto">
+    </header>
+    <div class="lineaGradiente"></div>
     <div class="signin-view">
         <form>
             <ul data-role="listview" data-style="inset">
                 <li>
-                    <label>Correo
+                    <label><tag class="glyph-icon flaticon-envelope"></tag>Correo
                         <input type="email" data-bind="value: homeModel.email" required autofocus>
                     </label>
                 </li>
                 <li>
-                    <label>Contraseña
+                    <label><tag class="glyph-icon flaticon-key"></tag>Contraseña
                         <input type="password" data-bind="value: homeModel.password" required>
                     </label>
                 </li>
             </ul>
-
             <div class="button-group button-group-vertical">
                 <a data-role="button" class="primary" data-bind="events: { click: homeModel.signin }">Iniciar Sesión</a>
-
                 <a data-role="button" data-bind="events: { click: homeModel.goToRegistro }">Registrarse</a>
-
             </div>
         </form>
     </div>
     <div class="offline" align="center" style="display:none;">
         You are currently offline. Before using this app in offline mode you must initialize it while you are online
     </div>
-    <!-- START_CUSTOM_CODE_homeModel -->
-    <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
-
-    <!-- END_CUSTOM_CODE_homeModel -->
-
-    <!-- START_CUSTOM_CODE_home -->
-    <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
-
-    <!-- END_CUSTOM_CODE_home -->
     
-    <a data-role="button" onclick="xxx();" >xxx</a> 
+    <div data-role="footer" class="lineaGradiente"></div>
+    <div data-role="footer">
+        <img src="imgs/ic_copyright.png" width="100%" height="auto">
+    </div>
 </div>

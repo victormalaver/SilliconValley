@@ -1,0 +1,78 @@
+<div data-role="view" data-title="Crear Nota" data-model="app.nota.addItemViewModel" data-bind="events: { show: onShow }" id="notaModelAddItemView">
+    <header data-role="header">
+        <div data-role="navbar" class="header-text">
+            <span style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis; text-align: center; display: block; margin-left: 70px; margin-right: 70px;" data-role="view-title"></span>
+            <a data-role="backbutton" data-align="left">Cancel</a>
+        </div>
+    </header>
+    <div class="lineaGradiente"></div>
+    <div id="editableListForm20" class="form-view">
+        <form>
+            <ul class="form-content" data-role="listview" data-style="inset">
+                <li class="form-content-item" onclick="openModal('modalview-categoria-add')">
+                    <label>
+
+                        <span>Categoria</span>
+
+                        <input id="addCategoria" data-bind="value: addFormData.categoria" type="text" disabled>
+                        
+                        <span class="flaticon-arrow-point-to-down"></span>
+                        
+                    </label>
+                </li>
+                <li class="form-content-item" onclick="openModal('modalview-tipo-add')">
+                    <label>
+
+                        <span>Tipo</span>
+
+                        <input id="addTipo" data-bind="value: addFormData.tipo" type="text" disabled>
+                        
+                        <span class="flaticon-arrow-point-to-down"></span>
+                        
+                    </label>
+                </li>
+                <li class="form-content-item">
+                    <label>
+                        <span>Comentario</span>
+                        &nbsp;
+                        <textarea id="comentarioAdd" data-bind="value: addFormData.comentario" class="k-textbox" placeholder="Comentario" rows="5"></textarea>
+                    </label>
+                </li>
+            </ul>
+            <div class="button-group button-group-vertical">
+                <a data-role="button" data-bind="events: { click: homeModel.goToAudios }">Grabar Audio</a>
+                <a data-role="button" class="primary" data-bind="events: { click: onSaveClick }">Crear Nota</a>
+            </div>
+        </form>
+        <!-- START_CUSTOM_CODE_editableListForm20 -->
+        <!-- END_CUSTOM_CODE_editableListForm20 -->
+    </div>
+</div>
+<div data-role="modalview" id="modalview-categoria-add" style="width: 90%;" data-model="app.nota.addItemViewModel">
+    <div data-role="header">
+        <div data-role="navbar">
+            <span>Categorías</span>
+            <a onclick="closeModal('modalview-categoria-add')" data-role="button" data-align="right"><span class="flaticon-close"></span></a>
+        </div>
+    </div>
+    <ul data-role="listview" data-style="inset">
+        <li id="listCategoriasAdd" class="form-content-item"></li>
+    </ul>
+    <div class="button-group">
+        <a data-role="button" class="primary" data-bind="events: { click: onCloseModalCategoriaAdd }">Aceptar</a>
+    </div>
+</div>
+<div data-role="modalview" id="modalview-tipo-add" style="width: 90%;" data-model="app.nota.addItemViewModel">
+    <div data-role="header">
+        <div data-role="navbar">
+            <span>Tipos</span>
+            <a onclick="closeModal('modalview-tipo-add')" data-role="button" data-align="right"><span class="flaticon-close"></span></a>
+        </div>
+    </div>
+    <ul data-role="listview" data-style="inset">
+        <li id="listTiposAdd" class="form-content-item"></li>
+    </ul>
+    <div class="button-group">
+        <a data-role="button" class="primary" data-bind="events: { click: onCloseModalTipoAdd }">Aceptar</a>
+    </div>
+</div>

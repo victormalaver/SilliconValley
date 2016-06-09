@@ -11,11 +11,15 @@
     <script src="kendo/js/jquery.min.js"></script>
     <script src="kendo/js/kendo.mobile.min.js"></script>
     <script src="app.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/icons/flaticon.css">
 </head>
 
 <body id="kendoUiMobileApp">
     <script src="components/home/index.js"></script>
     <script src="components/expocision/index.js"></script>
+    <script src="components/nota/index.js"></script>
+    <script src="components/tipo/index.js"></script>
+    <script src="components/categoria/index.js"></script>
     <div data-role="layout" data-id="main">
         <header data-role="header">
             <div data-role="navbar">
@@ -31,16 +35,15 @@
             </div>
         </header>
     </div>
-    <div id="appDrawer" data-role="drawer" data-title="Navigation">
-        <header data-role="header">
-            <div data-role="navbar">
-                <span data-role="view-title"></span>
-            </div>
-        </header>
+    <div id="appDrawer" data-role="drawer">
         <ul id="navigation-container" data-role="listview">
-            <li><a href="components/home/view.html" data-icon="home">Home View</a></li>
-            <li><a href="components/expocision/view.html" data-icon="bookmarks">Exposiciones</a></li>
+            <li><a href="components/home/view.html"><span class="glyph-icon flaticon-home-page"></span>Inicio</a></li>
+            <li><a href="components/expocision/view.html"><span class="glyph-icon flaticon-boy-with-tie-talking"></span>Exposiciones</a></li>
         </ul>
+        <div data-role="footer" class="lineaGradiente"></div>
+        <div data-role="footer">
+            <img src="imgs/ic_copyright.png" width="100%" height="auto">
+        </div>
     </div>
     <!-- START_CUSTOM_CODE_kendoUiMobileApp -->
     <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->

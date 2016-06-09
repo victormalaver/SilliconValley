@@ -2,14 +2,12 @@
     float: left;
     margin-right: 15px;
 }
-
 #kendoUiMobileApp .block {
     display: block;
     margin: 1em;
     padding: 1em;
     text-align: center;
 }
-
 #kendoUiMobileApp .button-group,
 #kendoUiMobileApp .icon-group {
     width: 100%;
@@ -17,90 +15,73 @@
     border-collapse: separate;
     border-spacing: 1em;
 }
-
 #kendoUiMobileApp .button-group {
     table-layout: fixed;
 }
-
 #kendoUiMobileApp .button-group .km-button {
     display: table-cell;
     padding: .6em .8em;
     margin: 1em 0;
 }
-
 #kendoUiMobileApp .button-group.button-group-vertical .km-button {
     display: block;
 }
-
 #kendoUiMobileApp .group-separator {
     border: none;
     background: transparent;
 }
-
 #kendoUiMobileApp .group-separator-header {
     margin: 1em 0;
 }
-
 #kendoUiMobileApp .app-icon {
     text-align: center;
     margin: 3em 0;
 }
-
 #kendoUiMobileApp .view-title {
     text-align: center;
     font-weight: normal;
 }
-
 #kendoUiMobileApp .km-drawer-button:after,
 #kendoUiMobileApp .km-drawer-button:before {
     content: '\e077';
 }
-
 #kendoUiMobileApp form .form-content li p {
     margin: 0;
     padding: 0;
 }
-
 #kendoUiMobileApp .icon-group .app-icon,
 #kendoUiMobileApp .icon-group .app-details {
     display: table-cell;
     vertical-align: top;
 }
-
 #kendoUiMobileApp .icon-group .app-icon {
     margin: 0;
     width: 5em;
     overflow: hidden;
     text-align: left;
 }
-
 #kendoUiMobileApp .icon-group .app-icon img {
     display: block;
     max-width: 5em;
     height: auto;
 }
-
 #kendoUiMobileApp .icon-group .app-details h2,
 #kendoUiMobileApp .icon-group .app-details h4 {
     font-weight: normal;
     margin: 0;
 }
-
 #kendoUiMobileApp .icon-group .app-details h4 {
     color: #828282;
     margin-top: 0.5em;
 }
-
 #kendoUiMobileApp #navigation-container.km-tabstrip .km-button .km-text {
     max-width: 100%;
     word-wrap: break-word;
 }
-
 #kendoUiMobileApp .unsupported-preview {
     text-align: center;
     margin-top: 12rem;
 }
-
 #kendoUiMobileApp .info-icon {
     margin: 0 auto;
     width: 3.3rem;
@@ -108,30 +89,24 @@
     background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAABIklEQVRoge3YMU4CURDG8R+KqImGxNoTWNgYqSgtvYBn8EY2nkE7LTwItbGUwhgLFSxgLTS4i4w+SOafTDc73/vydva9HZIkSZIlooNrPM6IK2wUW10DehjXRC9ScC2ymMkOROQ0JtrAv5MGvjAKyinGLgZmN/AAO5GCrchiU9rY9313R7jH2x9oJslvieqBU5z5+Zowwh0ugjTD6OBF/RWiioNI8YhzYBtbc+TvBWh+kiexwt/1CAPPuMR7QK3i9NU3cT9SMHugNGmgNGmgNCtvYD2ozjHOcYLDmtxNHOEJD0H6C9HGUPPbaBXD6bPF6Zp/8VV0FxVf+R6IMLDInGdpZkS35n99biKEo/6JWyazoKaj81eTGdE4SD9JkiRJVpMPXjloDVm2S04AAAAASUVORK5CYII=');
     background-repeat: no-repeat;
 }
-
 #kendoUiMobileApp .editableListItem span {
     float: left;
 }
-
 #kendoUiMobileApp .km-content .details-content .editableListItem {
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
-
 #kendoUiMobileApp .km-content .details-content p,
 #kendoUiMobileApp.km-nova .km-content .details-content h3 {
     padding: 1rem;
     margin: 0;
 }
-
 #kendoUiMobileApp .km-content .details-content .editableListItem:first-of-type {
     border-top: 0;
 }
-
 #kendoUiMobileApp .details-content .editableListItem + .editableListItem {
     border-top: 0;
 }
-
 #kendoUiMobileApp .km-content li label:not(.km-label-above) > span:not(.km-widget),
 #kendoUiMobileApp .editableListItem > span {
     display: inline-block;
@@ -139,27 +114,22 @@
     width: 50%;
     padding-right: 10px;
 }
-
 #kendoUiMobileApp .km-content li p {
     margin-left: 0;
     margin-right: 0;
 }
-
 #kendoUiMobileApp .editableListItem {
     overflow: hidden;
     width: 100%;
 }
-
 #kendoUiMobileApp.km-ios7 .button-group .km-button.primary {
     color: #fff;
     background-color: #007aff;
 }
-
 #kendoUiMobileApp.km-android .button-group .km-button.primary {
     color: #fff;
     background-color: #33b5e5;
 }
-
 
 /* START_CUSTOM_CODE_kendoUiMobileApp */
 
@@ -168,3 +138,222 @@
 
 
 /* END_CUSTOM_CODE_kendoUiMobileApp */
+
+@font-face {
+    font-family: "Roboto-Regular";
+    src: url("fonts/Roboto-Regular.ttf") format("ttf"), url("fonts/Roboto-Regular.ttf") format("truetype"), url("fonts/Roboto-Regular.ttf") format("svg")
+}
+#appDrawer div.km-footer {
+    padding: 15px 10px 0 10px;
+    height: 55px;
+}
+#kendoUiMobileApp * {
+    font-family: "Roboto-Regular";
+}
+#homeView div.km-content.km-widget.km-scroll-wrapper.km-insetcontent {
+    background-image: url('../imgs/ic_fondo01.jpg');
+}
+#homeView header {
+    text-align: center;
+    background-color: #fff;
+}
+#homeView header.km-header {
+    padding: 10px 50px 10px 50px;
+}
+#homeView div.km-footer {
+    padding: 10px 50px 10px 50px;
+}
+#homeView div.km-listview-wrapper {
+    margin: 1em;
+}
+#homeView li {
+    border-color: #60A92F;
+    color: #60A92F;
+    border-width: 0 0 3px 0;
+    padding-left: 0px;
+}
+#expositorView li {
+    font-size: 19px;
+}
+#expositorView p {
+    margin: auto 0 auto 0;
+}
+#expositorView .image-with-text tag:last-of-type {
+    font-size: 16px;
+}
+#expositorView .button-group {
+    border-spacing: 1em 0;
+    font-size: 16px;
+    padding-left: 15%;
+}
+#expositorView .button-group a {
+    line-height: .4em;
+}
+#expositorView .button-group a>span {
+    float: left;
+}
+#expositorView [class^="flaticon-"]:before {
+    padding-right: 2px;
+    margin-left: -10px;
+}
+#notaView h3,
+#notaView tag {
+    font-size: 16px;
+}
+#notaView li a {
+    line-height: .4em;
+    font-size: 16px;
+}
+#notaView a.primary.km-widget.km-button {
+    background: #60A92F;
+    color: #fff;
+}
+#expocisionModelDetailsView img {
+    margin-top: 1rem;
+    border: solid 2px #fff;
+}
+#expocisionModelDetailsView div.details-content>div {
+    background-color: #025650;
+    text-align: center;
+}
+#expocisionModelDetailsView div.details-content>div>p {
+    color: #fff;
+}
+#expocisionModelDetailsView div.details-content>h3 {
+    color: #60A92F;
+}
+#expocisionModelDetailsView div.details-content>span {
+    font-weight: 800;
+    font-size: -webkit-xxx-large;
+    float: left;
+    color: #99C023;
+    margin: -3px 1rem 0 1rem;
+}
+#expocisionModelDetailsView hr {
+    margin: 1rem;
+    border: solid 1px #dfe1e2;
+}
+#notaModelAddItemView li {
+    border-width: 0;
+    padding-bottom: 0px;
+}
+#notaModelAddItemView #comentarioAdd {
+    border: solid 1px #dfe1e2;
+    right: 5px;
+    padding: 10px 0 10px 5px;
+    width: 100%;
+    margin-top: 10px;
+}
+#notaModelAddItemView li span {
+    color: #8D8B8D;
+    font-weight: bold;
+    font-size: 19px;
+}
+#notaModelAddItemView li input {
+    position: inherit;
+    border: solid 1px black;
+    margin: 30px 0 0 0;
+    padding: 13px;
+    line-height: 0;
+    width: 100%;
+    color: black;
+    font-size: 13px;
+}
+#notaModelAddItemView li input:disabled {
+    color: #8d8d8d;
+    border: solid 1px #dfe1e2;
+}
+#notaModelAddItemView span.flaticon-arrow-point-to-down {
+    float: right;
+    padding: 0;
+    margin: -42px -8px 0 0;
+    line-height: 0px;
+    color: #60A92F;
+}
+#notaModelAddItemView span.flaticon-arrow-point-to-down:before,
+#notaModelAddItemView span.flaticon-arrow-point-to-down:after {
+    text-align: right;
+    float: right;
+    font-size: 14px;
+}
+#notaModelAddItemView .button-group.button-group-vertical {
+    margin: 0px;
+}
+#notaModelDetailsView div.details-content>h3 {
+    font-size: 16px;
+}
+#notaModelDetailsView div.details-content>span {
+    font-weight: 800;
+    font-size: -webkit-xxx-large;
+    float: left;
+    color: #99C023;
+    margin: -3px 1rem 0 1rem;
+}
+#notaModelDetailsView hr {
+    margin: 1rem;
+    border: solid 1px #dfe1e2;
+}
+#notaModelEditItemView li {
+    border-width: 0;
+    padding-bottom: 0px;
+}
+#notaModelEditItemView #comentarioEdit {
+    border: solid 1px #dfe1e2;
+    right: 5px;
+    padding: 10px 0 10px 5px;
+    width: 100%;
+    margin-top: 10px;
+}
+#notaModelEditItemView li span {
+    color: #8D8B8D;
+    font-weight: bold;
+    font-size: 19px;
+}
+#notaModelEditItemView li input {
+    position: inherit;
+    border: solid 1px #dfe1e2;
+    margin: 30px 0 0 0;
+    padding: 13px;
+    line-height: 0;
+    width: 100%;
+    color: #8d8d8d;
+    font-size: 13px;
+}
+#notaModelEditItemView li input:disabled {
+    color: #8d8d8d;
+    border: solid 1px #dfe1e2;
+}
+#notaModelEditItemView span.flaticon-arrow-point-to-down {
+    float: right;
+    padding: 0;
+    margin: -42px -8px 0 0;
+    line-height: 0px;
+    color: #60A92F;
+}
+#notaModelEditItemView span.flaticon-arrow-point-to-down:before,
+#notaModelEditItemView span.flaticon-arrow-point-to-down:after {
+    text-align: right;
+    float: right;
+    font-size: 14px;
+}
+#notaModelEditItemView .button-group.button-group-vertical {
+    margin: 0px;
+}
+#notaModelEditItemView textarea {
+    color: #8d8d8d;
+    font-size: 16px;
+}
+.lineaGradiente {
+    background-image: -moz-linear-gradient( 0deg, rgb(1, 110, 56) 0%, rgb(135, 187, 27) 100%);
+    background-image: -webkit-linear-gradient( 0deg, rgb(1, 110, 56) 0%, rgb(135, 187, 27) 100%);
+    background-image: -ms-linear-gradient( 0deg, rgb(1, 110, 56) 0%, rgb(135, 187, 27) 100%);
+    height: 7px;
+}
+div>.lineaGradiente.km-footer{
+    margin: 0px;
+    padding: 0px !important;
+    background-image: -moz-linear-gradient( 0deg, rgb(1, 110, 56) 0%, rgb(135, 187, 27) 100%);
+    background-image: -webkit-linear-gradient( 0deg, rgb(1, 110, 56) 0%, rgb(135, 187, 27) 100%);
+    background-image: -ms-linear-gradient( 0deg, rgb(1, 110, 56) 0%, rgb(135, 187, 27) 100%);
+    height: 7px !important;
+}

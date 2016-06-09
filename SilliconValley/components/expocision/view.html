@@ -1,18 +1,17 @@
-<div data-role="view" data-title="Exposiciones" data-layout="main" data-model="app.expocision" data-show="app.expocision.onShow" data-after-show="app.expocision.afterShow">
- 
-    <!-- START_CUSTOM_CODE_expocision -->
-    <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
-    <!-- END_CUSTOM_CODE_expocision -->
-    <ul data-role="listview" data-auto-bind="false" data-style="inset" data-template="expocisionModelTemplate" data-bind="{ source: expocisionModel.dataSource, events: {click: expocisionModel.itemClick} }" data-pull-to-refresh="false" data-endless-scroll="false">
+<div id="expositorView" data-role="view" data-title="Exposiciones" data-layout="main" data-model="app.expocision" data-show="app.expocision.onShow" data-after-show="app.expocision.afterShow">
+    <div class="lineaGradiente"></div>
+    <ul data-role="listview" data-auto-bind="false" data-style="inset" data-template="expocisionModelTemplate" data-bind="{ source: expocisionModel.dataSource }" data-pull-to-refresh="false" data-endless-scroll="false">
     </ul>
-    <!-- START_CUSTOM_CODE_expocisionModel -->
-    <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
-    <!-- END_CUSTOM_CODE_expocisionModel -->
     <script type="text/x-kendo-template" id="expocisionModelTemplate">
         <div class="image-with-text">
-            <img src="#: data['PictureUrl'] #" width="30%" height="30%">
-            <h3><span class="#: data.icon() #"></span>#: data['Tema'] #</h3>
-            <p>#: data['Lugar'] #</p>
+            <img src="data:image/png;base64,#: data['imagen'] #" width="15%" height="15%" style="border-radius: 100%;">
+            <label>#: data['tema'] #</label>
+            <p>#: data['nombreEmpresa'] #</p>
+            <tag style="float: right;"> #= kendo.toString(new Date(data['fechaExposicion'] ), "d/M/yyyy h:mm tt") # </tag>
+            <div class="button-group">
+                <a data-role="button" class="primary flaticon-note" data-bind="events: { click: expocisionModel.goToNotas }">Notas</a>
+                <a data-role="button" class="flaticon-info-sign" data-bind="events: { click: expocisionModel.itemClick }">Información</a>
+            </div>
         </div>
     </script>
 </div>

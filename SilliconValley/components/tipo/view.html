@@ -1,0 +1,19 @@
+<div data-role="view" data-title="Tipo" data-layout="main" data-model="app.tipo" data-show="app.tipo.onShow" data-after-show="app.tipo.afterShow">
+
+    <!-- START_CUSTOM_CODE_tipo -->
+    <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+
+    <!-- END_CUSTOM_CODE_tipo -->
+    <ul data-role="listview" data-auto-bind="false" data-style="inset" data-template="tipoModelTemplate" data-bind="{ source: tipoModel.dataSource, events: {click: tipoModel.itemClick} }" data-pull-to-refresh="false" data-endless-scroll="false">
+    </ul>
+    <!-- START_CUSTOM_CODE_tipoModel -->
+    <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+
+    <!-- END_CUSTOM_CODE_tipoModel -->
+    <script type="text/x-kendo-template" id="tipoModelTemplate">
+        <div class="image-with-text">
+            <h3>#: data['Tipo'] #</h3>
+
+        </div>
+    </script>
+</div>

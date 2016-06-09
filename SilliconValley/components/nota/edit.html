@@ -1,0 +1,77 @@
+<div data-role="view" data-title="Editar Nota" data-model="app.nota.editItemViewModel" data-bind="events: { show: onShow }" id="notaModelEditItemView">
+    <header data-role="header">
+        <div data-role="navbar" class="header-text">
+            <span style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis; text-align: center; display: block; margin-left: 70px; margin-right: 70px;" data-role="view-title">Edit</span>
+            <a data-role="backbutton" data-align="left">Cancel</a>
+        </div>
+    </header>
+    <div class="lineaGradiente"></div>
+    <div id="editableListForm21" class="form-view">
+        <form>
+            <ul class="form-content" data-role="listview" data-style="inset">
+                <li class="form-content-item" onclick="openModal('modalview-categoria-edit')">
+                    <label>
+
+                        <span>Categoria</span>
+
+                        <input id="editCategoria" data-bind="value: editFormData.categoria" type="text" disabled>
+                        
+                        <span class="flaticon-arrow-point-to-down"></span>
+                        
+                    </label>
+                </li>
+                <li class="form-content-item" onclick="openModal('modalview-tipo-edit')">
+                    <label>
+
+                        <span>Tipo</span>
+
+                        <input id="editTipo" data-bind="value: editFormData.tipo" type="text" disabled>
+                        
+                        <span class="flaticon-arrow-point-to-down"></span>
+                        
+                    </label>
+                </li>
+                <li class="form-content-item">
+                    <label>
+                        <span>Comentario</span>
+                        &nbsp;
+                        <textarea id="comentarioEdit" data-bind="value: editFormData.comentario" class="k-textbox" placeholder="Comentario" rows="10"></textarea>
+                    </label>
+                </li>
+            </ul>
+            <div class="button-group button-group-vertical">
+                <a data-role="button" class="primary" data-bind="events: { click: onSaveClick }">Editar Nota</a>
+            </div>
+        </form>
+        <!-- START_CUSTOM_CODE_editableListForm21 -->
+        <!-- END_CUSTOM_CODE_editableListForm21 -->
+    </div>
+</div>
+<div data-role="modalview" id="modalview-categoria-edit" style="width: 90%;" data-model="app.nota.editItemViewModel">
+    <div data-role="header">
+        <div data-role="navbar">
+            <span>Categorías</span>
+            <a onclick="closeModal('modalview-categoria-edit')" data-role="button" data-align="right"><span class="flaticon-close"></span></a>
+        </div>
+    </div>
+    <ul data-role="listview" data-style="inset">
+        <li id="listCategoriasEdit" class="form-content-item"></li>
+    </ul>
+    <div class="button-group">
+        <a data-role="button" class="primary" data-bind="events: { click: onCloseModalCategoriaEdit }">Aceptar</a>
+    </div>
+</div>
+<div data-role="modalview" id="modalview-tipo-edit" style="width: 90%;" data-model="app.nota.editItemViewModel">
+    <div data-role="header">
+        <div data-role="navbar">
+            <span>Tipos</span>
+            <a onclick="closeModal('modalview-tipo-edit')" data-role="button" data-align="right"><span class="flaticon-close"></span></a>
+        </div>
+    </div>
+    <ul data-role="listview" data-style="inset">
+        <li id="listTiposEdit" class="form-content-item"></li>
+    </ul>
+    <div class="button-group">
+        <a data-role="button" class="primary" data-bind="events: { click: onCloseModalTipoEdit }">Aceptar</a>
+    </div>
+</div>

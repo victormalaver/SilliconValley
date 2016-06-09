@@ -1,0 +1,71 @@
+    /*
+    Flaticon icon font: Flaticon
+    Creation date: 02/06/2016 01:05
+    */
+
+    @font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+    .fi:before{
+        display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+    }
+
+    .flaticon-arrow-point-to-down:before { content: "\f100"; }
+.flaticon-black-user-shape:before { content: "\f101"; }
+.flaticon-boy-with-tie-talking:before { content: "\f102"; }
+.flaticon-close:before { content: "\f103"; }
+.flaticon-envelope:before { content: "\f104"; }
+.flaticon-home-page:before { content: "\f105"; }
+.flaticon-info-sign:before { content: "\f106"; }
+.flaticon-key:before { content: "\f107"; }
+.flaticon-keyboard-left-arrow-button:before { content: "\f108"; }
+.flaticon-logout:before { content: "\f109"; }
+.flaticon-music:before { content: "\f10a"; }
+.flaticon-note:before { content: "\f10b"; }
+.flaticon-paper-bin:before { content: "\f10c"; }
+.flaticon-play-button:before { content: "\f10d"; }
+.flaticon-plus:before { content: "\f10e"; }
+.flaticon-tick:before { content: "\f10f"; }
+    
+    $font-Flaticon-arrow-point-to-down: "\f100";
+    $font-Flaticon-black-user-shape: "\f101";
+    $font-Flaticon-boy-with-tie-talking: "\f102";
+    $font-Flaticon-close: "\f103";
+    $font-Flaticon-envelope: "\f104";
+    $font-Flaticon-home-page: "\f105";
+    $font-Flaticon-info-sign: "\f106";
+    $font-Flaticon-key: "\f107";
+    $font-Flaticon-keyboard-left-arrow-button: "\f108";
+    $font-Flaticon-logout: "\f109";
+    $font-Flaticon-music: "\f10a";
+    $font-Flaticon-note: "\f10b";
+    $font-Flaticon-paper-bin: "\f10c";
+    $font-Flaticon-play-button: "\f10d";
+    $font-Flaticon-plus: "\f10e";
+    $font-Flaticon-tick: "\f10f";

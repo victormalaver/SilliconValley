@@ -1,5 +1,5 @@
 'use strict';
-var servidor = "http://localhost:8080/WsRestfull.SilliconValley0124/";
+var servidor = "http://192.168.1.201:8080/silliconvalley/";
 var token = "";
 (function () {
     var app = {
@@ -61,3 +61,19 @@ var token = "";
 // Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes
 
 // END_CUSTOM_CODE_kendoUiMobileApp
+
+
+
+
+function closeModal(modal) {
+    $("#" + modal).kendoMobileModalView("close");
+}
+
+function openModal(modal) {
+    var mv = $("#" + modal).data("kendoMobileModalView");
+    mv.shim.popup.options.animation.open.effects = "zoom";
+    mv.open();
+}
+function cerrarSesion() {
+    $("#DisplayName").attr("type", "");
+}

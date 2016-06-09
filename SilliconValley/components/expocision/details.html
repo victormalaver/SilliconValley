@@ -2,17 +2,26 @@
     <header data-role="header">
         <div data-role="navbar" class="header-text">
             <a data-role="backbutton" data-align="left">Back</a>
-            <span data-bind="text: currentItem.Fecha" style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis; text-align: center; display: block; margin-left: 70px; margin-right: 70px;"></span>
+            <span data-bind="text: currentItem.nombreEmpresa" style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis; text-align: center; display: block; margin-left: 70px; margin-right: 70px;"></span>
         </div>
     </header>
+    <div class="lineaGradiente"></div>
     <div class="details-content">
-        <h3 data-bind="text: currentItem.Tema"></h3>
-        <p data-bind="text: currentItem.Lugar"></p>
-
-        <p data-bind="html: currentItem.Resumen"></p>
+        <div>
+            <img data-bind="attr: { src: currentItem.imagen }" width="50%" height="auto" style="border-radius: 100%;">
+            <p data-bind="text: currentItem.fechaExposicion"></p>
+        </div>
+        <h3 data-bind="text: currentItem.tema"></h3>
+        <hr>
+        <span>&#8226;</span>
+        <p>Expositor</p>
+        <p data-bind="html: currentItem.nombreExpositor" style="margin-left: 2.1rem;">Goku</p>
+        <hr>
+        <span>&#8226;</span>
+        <p>Descripción</p>
+        <p data-bind="html: currentItem.biografiaDetalle" style="margin-left: 2.1rem;"></p>
     </div>
     <!-- START_CUSTOM_CODE_expocisionModel -->
     <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
-
     <!-- END_CUSTOM_CODE_expocisionModel -->
 </div>

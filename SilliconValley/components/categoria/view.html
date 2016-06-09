@@ -1,0 +1,19 @@
+<div data-role="view" data-title="Categorias" data-layout="main" data-model="app.categoria" data-show="app.categoria.onShow" data-after-show="app.categoria.afterShow">
+
+    <!-- START_CUSTOM_CODE_categoria -->
+    <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+
+    <!-- END_CUSTOM_CODE_categoria -->
+    <ul data-role="listview" data-auto-bind="false" data-style="inset" data-template="categoriaModelTemplate" data-bind="{ source: categoriaModel.dataSource, events: {click: categoriaModel.itemClick} }" data-pull-to-refresh="false" data-endless-scroll="false">
+    </ul>
+    <!-- START_CUSTOM_CODE_categoriaModel -->
+    <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+
+    <!-- END_CUSTOM_CODE_categoriaModel -->
+    <script type="text/x-kendo-template" id="categoriaModelTemplate">
+        <div class="image-with-text">
+            <h3>#: data['Categoria'] #</h3>
+
+        </div>
+    </script>
+</div>

@@ -1,0 +1,29 @@
+<div data-role="view" data-title="Details" data-model="app.nota.notaModel" data-bind="events: { show: detailsShow }" id="notaModelDetailsView">
+    <header data-role="header">
+        <div data-role="navbar" class="header-text">
+            <a data-role="backbutton" data-align="left">Back</a>
+            <span style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis; text-align: center; display: block; margin-left: 70px; margin-right: 70px;">Detalle</span>
+            <a data-role="button" data-align="right" data-bind="events: { click: editClick }">Editar</a>
+            <a data-role="button" data-align="right" data-bind="events: { click: deleteClick }"><i class="km-icon km-delete"></i></a>
+        </div>
+    </header>
+    <div class="lineaGradiente"></div>
+    <!--     <div class="details-content">
+        <h3 data-bind="text: currentItem.comentario"></h3>
+        <p data-bind="text: currentItem.categorias"></p>
+
+        <p class="editableListItem"><span>Tipo</span><span data-bind="html: currentItem.tipos"></span></p>
+    </div>
+     -->
+    <div class="details-content">
+        <h3 data-bind="text: currentItem.comentario"></h3>
+        <hr>
+        <span>&#8226;</span>
+        <p>Categoria</p>
+        <p id="categoriaCurrent" style="margin-left: 2.1rem;"></p>
+        <hr>
+        <span>&#8226;</span>
+        <p>Tipo</p>
+        <p id="tipoCurrent" style="margin-left: 2.1rem;"></p>
+    </div>
+</div>
