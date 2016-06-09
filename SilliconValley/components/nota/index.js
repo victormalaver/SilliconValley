@@ -137,6 +137,12 @@ app.nota = kendo.observable({
             itemClick: function (e) {
                 app.mobileApp.navigate('#components/nota/details.html?uid=' + e.data.uid);
             },
+            openModalDelete: function () {
+                $("#mensajeModal").html("¿Desea eliminar la nota?");
+                $("#btnAccionModalEliminar").css('display', 'block');
+                $("#btnAccionModalVerificar").css('display', 'none');
+                openModal("modalview-alert");
+            },
             addClick: function () {
                 var currentUser = app.user;
                 // var currentUserId = currentUser.Id;
@@ -150,11 +156,18 @@ app.nota = kendo.observable({
                 // }
 
                 if (!currentUser) {
-                    alert("Inicie sesión para agregar una nota");
-                } else {
+                    $("#btnAccionModalEliminar").css('display', 'none');
+                    $("#btnAccionModalVerificar").css('display', 'block');
+                    $("#mensajeModal").html("Inicie sesión para agregar una nota");
+                    openModal("modalview-alert");
 
+                } else {
+                    app.mobileApp.navigate('#components/nota/add.html');
                 }
-                app.mobileApp.navigate('#components/nota/add.html');
+
+            },
+            goToView: function () {
+                app.mobileApp.navigate('#components/home/view.html');
             },
             editClick: function () {
                 var uid = this.currentItem.uid;
@@ -284,7 +297,7 @@ app.nota = kendo.observable({
             nota.push(item);
 
             console.log(nota);
-		
+
             return;
 
             $.ajax({

@@ -34,6 +34,23 @@
                 <span data-role="view-title"></span>
             </div>
         </header>
+        <div data-role="modalview" id="modalview-alert" data-model="app.nota" style="width: 90%;">
+            <div data-role="header">
+                <div data-role="navbar">
+                    <span>Confirmar</span>
+                    <a onclick="closeModal('modalview-alert')" data-click="closeModalViewLogin" data-role="button" data-align="right"><span class="flaticon-close"></span></a>
+                </div>
+            </div>
+            <ul data-role="listview" data-style="inset">
+                <li>
+                    <div id="mensajeModal"></div>
+                </li>
+            </ul>
+            <div class="button-group">
+                <a data-role="button" id="btnAccionModalEliminar" data-bind="events: { click: notaModel.deleteClick }">Aceptar</a>
+                <a data-role="button" id="btnAccionModalVerificar" data-bind="events: { click: notaModel.goToView }">Aceptar</a>
+            </div>
+        </div>
     </div>
     <div id="appDrawer" data-role="drawer">
         <ul id="navigation-container" data-role="listview">

@@ -167,7 +167,6 @@ app.expocision = kendo.observable({
     //         parent.set('expocisionModel', expocisionModel);
     //     });
     // } else {
-    console.log(token);
     parent.set('expocisionModel', expocisionModel);
     // }
 

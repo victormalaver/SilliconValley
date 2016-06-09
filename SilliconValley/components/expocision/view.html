@@ -1,5 +1,11 @@
 <div id="expositorView" data-role="view" data-title="Exposiciones" data-layout="main" data-model="app.expocision" data-show="app.expocision.onShow" data-after-show="app.expocision.afterShow">
-    <div class="lineaGradiente"></div>
+    <header data-role="header">
+        <div data-role="navbar" class="header-text">
+            <span data-role="view-title" style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis; text-align: center; display: block; margin-left: 70px; margin-right: 70px;"></span>
+            <a data-role="button" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
+        </div>
+        <div class="lineaGradiente"></div>
+    </header>
     <ul data-role="listview" data-auto-bind="false" data-style="inset" data-template="expocisionModelTemplate" data-bind="{ source: expocisionModel.dataSource }" data-pull-to-refresh="false" data-endless-scroll="false">
     </ul>
     <script type="text/x-kendo-template" id="expocisionModelTemplate">
