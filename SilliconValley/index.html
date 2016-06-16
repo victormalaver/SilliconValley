@@ -12,6 +12,7 @@
     <script src="kendo/js/kendo.mobile.min.js"></script>
     <script src="app.js"></script>
     <link rel="stylesheet" type="text/css" href="styles/icons/flaticon.css">
+    <script src="bower_components/everlive/min/everlive.all.min.js"></script>
 </head>
 
 <body id="kendoUiMobileApp">
@@ -54,8 +55,9 @@
     </div>
     <div id="appDrawer" data-role="drawer">
         <ul id="navigation-container" data-role="listview">
-            <li><a href="components/home/view.html"><span class="glyph-icon flaticon-home-page"></span>Inicio</a></li>
-            <li><a href="components/expocision/view.html"><span class="glyph-icon flaticon-boy-with-tie-talking"></span>Exposiciones</a></li>
+            <li id="liInicio"><a href="components/home/view.html"><span class="glyph-icon flaticon-home-page"></span>Inicio</a></li>
+            <li id="liExposiciones" style="border-bottom:solid 1px #017678;"><a href="components/expocision/view.html"><span class="glyph-icon flaticon-boy-with-tie-talking"></span>Exposiciones</a></li>
+            <li id="liCerrarSesion" style="display:none;"><a href="components/home/view.html" onclick="cerrarSesion();"><span class="glyph-icon flaticon-logout"></span>Cerrar Sesión</a></li>
         </ul>
         <div data-role="footer" class="lineaGradiente"></div>
         <div data-role="footer">

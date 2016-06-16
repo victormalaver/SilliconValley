@@ -353,7 +353,7 @@
 
 .km-nova input[type=radio],
 .km-nova input[type=checkbox] {
-    color: #ff4350;
+    color: #60A92F;
     border-color: #dee7ec;
 }
 .km-nova input[type=checkbox]:checked:after {

@@ -8,14 +8,10 @@
         <form>
             <ul data-role="listview" data-style="inset">
                 <li>
-                    <label><tag class="glyph-icon flaticon-envelope"></tag>Correo
-                        <input type="email" data-bind="value: homeModel.email" required autofocus>
-                    </label>
+                    <tag class="glyph-icon flaticon-envelope"></tag><input id="emailLogin" type="email" data-bind="value: homeModel.email" placeholder="Correo" required autofocus>
                 </li>
                 <li>
-                    <label><tag class="glyph-icon flaticon-key"></tag>Contraseña
-                        <input type="password" data-bind="value: homeModel.password" required>
-                    </label>
+                    <tag class="glyph-icon flaticon-key"></tag><input id="passLogin" type="password" data-bind="value: homeModel.password" placeholder="Contraseña" required>
                 </li>
             </ul>
             <div class="button-group button-group-vertical">
@@ -24,12 +20,22 @@
             </div>
         </form>
     </div>
-    <div class="offline" align="center" style="display:none;">
-        You are currently offline. Before using this app in offline mode you must initialize it while you are online
-    </div>
-    
     <div data-role="footer" class="lineaGradiente"></div>
     <div data-role="footer">
         <img src="imgs/ic_copyright.png" width="100%" height="auto">
+    </div>
+</div>
+<div data-role="modalview" id="modalview-alert-home" style="width: 90%;">
+    <div data-role="header">
+        <div data-role="navbar">
+            <span>Mensaje</span>
+            <a onclick="closeModal('modalview-alert-home')" data-role="button" data-align="right"><span class="flaticon-close"></span></a>
+        </div>
+    </div>
+    <ul data-role="listview" data-style="inset">
+        <li id="contentAlertHome" class="form-content-item"></li>
+    </ul>
+    <div class="button-group">
+        <a data-role="button" class="primary" onclick="closeModal('modalview-alert-home')">Aceptar</a>
     </div>
 </div>

@@ -9,23 +9,23 @@
     <div id="editableListForm21" class="form-view">
         <form>
             <ul class="form-content" data-role="listview" data-style="inset">
-                <li class="form-content-item" onclick="openModal('modalview-categoria-edit')">
+                <li class="form-content-item" id="li-modalview-categoria-edit" onclick="openModal('modalview-categoria-edit')">
                     <label>
 
                         <span>Categoria</span>
 
-                        <input id="editCategoria" data-bind="value: editFormData.categoria" type="text" disabled>
+                        <input id="editCategoria" type="text" disabled>
                         
                         <span class="flaticon-arrow-point-to-down"></span>
                         
                     </label>
                 </li>
-                <li class="form-content-item" onclick="openModal('modalview-tipo-edit')">
+                <li class="form-content-item" id="li-modalview-tipo-edit" onclick="openModal('modalview-tipo-edit')">
                     <label>
 
                         <span>Tipo</span>
 
-                        <input id="editTipo" data-bind="value: editFormData.tipo" type="text" disabled>
+                        <input id="editTipo" type="text" disabled>
                         
                         <span class="flaticon-arrow-point-to-down"></span>
                         
@@ -35,12 +35,12 @@
                     <label>
                         <span>Comentario</span>
                         &nbsp;
-                        <textarea id="comentarioEdit" data-bind="value: editFormData.comentario" class="k-textbox" placeholder="Comentario" rows="10"></textarea>
+                        <textarea id="comentarioEdit" class="k-textbox" placeholder="Comentario" rows="10"></textarea>
                     </label>
                 </li>
             </ul>
             <div class="button-group button-group-vertical">
-                <a data-role="button" class="primary" data-bind="events: { click: onSaveClick }">Editar Nota</a>
+                <a id="btnEditNota" data-role="button" class="primary" data-bind="events: { click: onSaveClick }">Editar Nota</a>
             </div>
         </form>
         <!-- START_CUSTOM_CODE_editableListForm21 -->

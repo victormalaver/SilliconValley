@@ -1,6 +1,9 @@
 'use strict';
-var servidor = "http://192.168.1.201:8080/silliconvalley/";
-var token = "";
+// var servidor = "http://localhost:8080/silliconvalley/";
+// var servidor = "http://192.168.1.201:8080/silliconvalley/";
+var servidor = "http://190.237.15.180:201/silliconvalley/";
+var idUsuario = "";
+var idExposicion = "";
 (function () {
     var app = {
         data: {}
@@ -74,6 +77,9 @@ function openModal(modal) {
     mv.shim.popup.options.animation.open.effects = "zoom";
     mv.open();
 }
+
 function cerrarSesion() {
-    $("#DisplayName").attr("type", "");
+    $("#liInicio").css("display", "block");
+    $("#liCerrarSesion").css("display", "none");
+    $("#liExposiciones").css("border-bottom", "solid 1px #017678");
 }

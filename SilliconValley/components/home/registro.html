@@ -8,19 +8,16 @@
         <form>
             <ul data-role="listview" data-style="inset">
                 <li>
-                    <label>Correo
-                        <input type="email" data-bind="value: homeModel.email" required>
-                    </label>
+                    <tag class="glyph-icon flaticon-envelope"></tag><input id="correoUsuario" type="email" data-bind="value: homeModel.email" placeholder="Correo" required>
                 </li>
                 <li>
-                    <label>Contraseña
-                        <input type="password" data-bind="value: homeModel.password">
-                    </label>
+                    <tag class="glyph-icon flaticon-key"></tag><input id="pass1" type="password" data-bind="value: homeModel.password" placeholder="Contraseña">
                 </li>
                 <li>
-                    <label>Nombre
-                        <input type="text" data-bind="value: homeModel.displayName">
-                    </label>
+                    <tag class="glyph-icon flaticon-key"></tag><input id="pass2" type="password" placeholder="Confirmar contraseña">
+                </li>
+                <li>
+                    <tag class="glyph-icon  flaticon-black-user-shape"></tag><input id="nombreUsuario" type="text" data-bind="value: homeModel.displayName" placeholder="Nombre">
                 </li>
             </ul>
             <div class="button-group button-group-vertical">

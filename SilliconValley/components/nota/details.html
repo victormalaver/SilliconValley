@@ -8,7 +8,6 @@
         </div>
         <div class="lineaGradiente"></div>
     </header>
-    
     <!--     <div class="details-content">
         <h3 data-bind="text: currentItem.comentario"></h3>
         <p data-bind="text: currentItem.categorias"></p>
@@ -26,5 +25,26 @@
         <span>&#8226;</span>
         <p>Tipo</p>
         <p id="tipoCurrent" style="margin-left: 2.1rem;"></p>
+    </div>
+    <div class="button-group button-group-vertical">
+        <a id="btnGrabarAudio" data-role="button" data-bind="events: {click: captureAudio}">Grabar Audio</a>
+    </div>
+    <div id="rutaAudio" style="display:none;"></div>
+    <div id="rutaBackEnd" style="display:none;"></div>
+    <div class="media"></div>
+</div>
+
+<div data-role="modalview" id="modalview-eliminar-audio" style="width: 90%;">
+    <div data-role="header">
+        <div data-role="navbar">
+            <span>Mensaje</span>
+            <a onclick="closeModal('modalview-eliminar-audio')" data-role="button" data-align="right"><span class="flaticon-close"></span></a>
+        </div>
+    </div>
+    <ul data-role="listview" data-style="inset">
+        <li id="contentDeleteAudio" class="form-content-item"></li>
+    </ul>
+    <div class="button-group">
+        <a id="btnDeleteAudio" data-role="button" class="primary" onclick="deleteAudio();">Aceptar</a>
     </div>
 </div>

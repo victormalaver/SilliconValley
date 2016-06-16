@@ -143,11 +143,9 @@
     font-family: "Roboto-Regular";
     src: url("fonts/Roboto-Regular.ttf") format("ttf"), url("fonts/Roboto-Regular.ttf") format("truetype"), url("fonts/Roboto-Regular.ttf") format("svg")
 }
-
 #kendoUiMobileApp * {
     font-family: "Roboto-Regular";
 }
-
 #appDrawer div.km-footer {
     padding: 15px 10px 0 10px;
     height: 55px;
@@ -174,10 +172,14 @@
     border-width: 0 0 3px 0;
     padding-left: 0px;
 }
-
-
-
-
+#homeView input {
+    width: 100%;
+    padding-left: 40px;
+    color: #60A92F;
+}
+#homeView input::-webkit-input-placeholder {
+    color: #60A92F;
+}
 #registroView div.km-content.km-widget.km-scroll-wrapper.km-insetcontent {
     background-image: url('../imgs/ic_fondo01.jpg');
 }
@@ -200,9 +202,14 @@
     border-width: 0 0 3px 0;
     padding-left: 0px;
 }
-
-
-
+#registroView input {
+    width: 100%;
+    padding-left: 40px;
+    color: #60A92F;
+}
+#registroView input::-webkit-input-placeholder {
+    color: #60A92F;
+}
 #expositorView li {
     font-size: 19px;
 }
@@ -212,16 +219,17 @@
 #expositorView .image-with-text tag:last-of-type {
     font-size: 16px;
 }
-#expositorView .button-group {
-    border-spacing: 1em 0;
+#expositorView .btn-group {
     font-size: 16px;
     padding-left: 15%;
 }
-#expositorView .button-group a {
-    line-height: .4em;
+#expositorView .btn-group .primary.flaticon-note.km-widget.km-button {
+    margin-left: 1em;
+    background-color: #60A92F;
+    color: #fff;
 }
-#expositorView .button-group a>span {
-    float: left;
+#expositorView .btn-group a {
+    line-height: 0.8em;
 }
 #expositorView [class^="flaticon-"]:before {
     padding-right: 2px;
@@ -299,6 +307,9 @@
 #notaModelAddItemView li input:disabled {
     color: #8d8d8d;
     border: solid 1px #dfe1e2;
+    /*IOS*/
+    -webkit-text-fill-color: #8d8d8d;
+    -webkit-opacity: 1;
 }
 #notaModelAddItemView span.flaticon-arrow-point-to-down {
     float: right;
@@ -359,6 +370,9 @@
 #notaModelEditItemView li input:disabled {
     color: #8d8d8d;
     border: solid 1px #dfe1e2;
+    /*IOS*/
+    -webkit-text-fill-color: #8d8d8d;
+    -webkit-opacity: 1;
 }
 #notaModelEditItemView span.flaticon-arrow-point-to-down {
     float: right;
@@ -394,7 +408,48 @@ div>.lineaGradiente.km-footer {
     background-image: -ms-linear-gradient( 0deg, rgb(1, 110, 56) 0%, rgb(135, 187, 27) 100%);
     height: 7px !important;
 }
-
-#modalview-alert span.km-text{
-    color:#60A92F;
+#modalview-alert span.km-text {
+    color: #60A92F;
+}
+.error {
+    border-color: tomato!important;
+}
+.media {
+    margin: 0 1em 10em 1em;
+    width: 100%;
+}
+.primero,
+.segundo,
+.tercero {
+    padding: 10px;
+    color: #8D8B8D;
+    border-top: solid 1px #99C023;
+    border-left: solid 1px #99C023;
+}
+.primero .glyph-icon:before,
+.tercero .glyph-icon:before {
+    float: none;
+    padding: 0px;
+    font-size: 20px;
+}
+.segundo .glyph-icon:before {
+    float: none;
+    padding-right: 10px;
+    font-size: 20px;
+}
+.primero {
+    background-color: #f1f1f1;
+    float: left;
+    width: 12%;
+}
+.segundo {
+    background-color: #f1f1f1;
+    float: left;
+    width: 68%;
+    font-size: 16px;
+}
+.tercero {
+    background-color: #99C023;
+    float: left;
+    width: 12%;
 }

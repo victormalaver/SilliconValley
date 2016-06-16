@@ -84,7 +84,6 @@ app.expocision = kendo.observable({
             //     $("#products").html(kendo.render(template, this.view()));
             // },
             change: function (e) {
-                console.log(this.data());
                 var data = this.data();
                 for (var i = 0; i < data.length; i++) {
                     var dataItem = data[i];
@@ -132,11 +131,14 @@ app.expocision = kendo.observable({
         expocisionModel = kendo.observable({
             dataSource: dataSource,
             goToNotas: function (e) {
-                app.mobileApp.navigate('#components/nota/view.html?filter=' + encodeURIComponent(JSON.stringify({
-                    field: 'expositor',
-                    value: e.data.id,
-                    operator: 'eq'
-                })));
+                // app.mobileApp.navigate('#components/nota/view.html?filter=' + encodeURIComponent(JSON.stringify({
+                //     field: 'expositor',
+                //     value: e.data.id,
+                //     operator: 'eq'
+                // })));
+                idExposicion = e.data.id;
+                app.mobileApp.navigate('#components/nota/view.html');
+                
             },
             itemClick: function (e) {
 
@@ -149,7 +151,7 @@ app.expocision = kendo.observable({
                     // itemModel = dataSource.getByUid(item);
                     itemModel = dataSource.get(item);
                 if (itemModel.fechaExposicion) {
-                    itemModel.fechaExposicion =kendo.toString(new Date(itemModel.fechaExposicion), "d/M/yyyy h:mm tt") 
+                    itemModel.fechaExposicion = kendo.toString(new Date(itemModel.fechaExposicion), "d/M/yyyy h:mm tt")
                 }
 
                 if (itemModel.imagen) {

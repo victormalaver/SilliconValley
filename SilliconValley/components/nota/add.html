@@ -4,12 +4,12 @@
             <span style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis; text-align: center; display: block; margin-left: 70px; margin-right: 70px;" data-role="view-title"></span>
             <a data-role="backbutton" data-align="left">Cancel</a>
         </div>
+        <div class="lineaGradiente"></div>
     </header>
-    <div class="lineaGradiente"></div>
     <div id="editableListForm20" class="form-view">
         <form>
             <ul class="form-content" data-role="listview" data-style="inset">
-                <li class="form-content-item" onclick="openModal('modalview-categoria-add')">
+                <li class="form-content-item" id="li-modalview-categoria-add" onclick="openModal('modalview-categoria-add')">
                     <label>
 
                         <span>Categoria</span>
@@ -20,7 +20,7 @@
                         
                     </label>
                 </li>
-                <li class="form-content-item" onclick="openModal('modalview-tipo-add')">
+                <li class="form-content-item" id="li-modalview-tipo-add" onclick="openModal('modalview-tipo-add')">
                     <label>
 
                         <span>Tipo</span>
@@ -40,7 +40,7 @@
                 </li>
             </ul>
             <div class="button-group button-group-vertical">
-                <a data-role="button" data-bind="events: { click: homeModel.goToAudios }">Grabar Audio</a>
+                <!--                 <a data-role="button" data-bind="events: { click: homeModel.goToAudios }">Grabar Audio</a> -->
                 <a data-role="button" class="primary" data-bind="events: { click: onSaveClick }">Crear Nota</a>
             </div>
         </form>

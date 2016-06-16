@@ -14,7 +14,8 @@
             <label>#: data['tema'] #</label>
             <p>#: data['nombreEmpresa'] #</p>
             <tag style="float: right;"> #= kendo.toString(new Date(data['fechaExposicion'] ), "d/M/yyyy h:mm tt") # </tag>
-            <div class="button-group">
+            </br>
+            <div class="btn-group">
                 <a data-role="button" class="primary flaticon-note" data-bind="events: { click: expocisionModel.goToNotas }">Notas</a>
                 <a data-role="button" class="flaticon-info-sign" data-bind="events: { click: expocisionModel.itemClick }">Información</a>
             </div>

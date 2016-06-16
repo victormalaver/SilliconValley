@@ -4,7 +4,7 @@
   "projectVersion": 1,
   "AppIdentifier": "com.telerik.SilliconValley",
   "DisplayName": "SilliconValley",
-  "Author": "",
+  "Author": "Valmar Group ",
   "Description": "SilliconValley",
   "BundleVersion": "1.0",
   "AndroidVersionCode": "1",
@@ -40,5 +40,16 @@
     "ID_RESOLUTION_WVGA",
     "ID_RESOLUTION_WXGA",
     "ID_RESOLUTION_HD720P"
+  ],
+  "CorePlugins": [
+    "cordova-plugin-device",
+    "cordova-plugin-file",
+    "cordova-plugin-file-transfer",
+    "cordova-plugin-media",
+    "cordova-plugin-media-capture",
+    "cordova-plugin-network-information",
+    "cordova-plugin-splashscreen",
+    "cordova-plugin-statusbar",
+    "cordova-plugin-whitelist"
   ]
 }
