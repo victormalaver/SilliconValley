@@ -257,7 +257,7 @@ app.nota = kendo.observable({
                     html.push('<label class="km-listview-label"><span>' + data[i].descripcion + '</span><input name="inputCategoriasAdd" value="' + data[i].id + '" data-role="switch" type="checkbox" class="km-widget km-icon km-check"></label>');
                 }
                 $("#listCategoriasAdd").html(html);
-                $("#li-modalview-categoria-add").attr("onclick","openModal('modalview-categoria-edit')");
+                $("#li-modalview-categoria-add").attr("onclick","openModal('modalview-categoria-add')");
             });
             //cargamos ds tipo 
             var dsTipo = app.tipo.tipoModel.dataSource;
@@ -268,7 +268,7 @@ app.nota = kendo.observable({
                     html.push('<label class="km-listview-label"><span>' + data[i].descripcion + '</span><input name="inputTiposAdd" value="' + data[i].id + '" data-role="switch" type="checkbox" class="km-widget km-icon km-check"></label>');
                 }
                 $("#listTiposAdd").html(html);
-                $("#li-modalview-tipo-add").attr("onclick","openModal('modalview-categoria-edit')");
+                $("#li-modalview-tipo-add").attr("onclick","openModal('modalview-categoria-add')");
             });
 
         },
