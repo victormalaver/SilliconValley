@@ -268,7 +268,7 @@ app.nota = kendo.observable({
                     html.push('<label class="km-listview-label"><span>' + data[i].descripcion + '</span><input name="inputTiposAdd" value="' + data[i].id + '" data-role="switch" type="checkbox" class="km-widget km-icon km-check"></label>');
                 }
                 $("#listTiposAdd").html(html);
-                $("#li-modalview-tipo-add").attr("onclick","openModal('modalview-categoria-add')");
+                $("#li-modalview-tipo-add").attr("onclick","openModal('modalview-tipo-add')");
             });
 
         },
